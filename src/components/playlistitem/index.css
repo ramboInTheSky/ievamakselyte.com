@@ -1,0 +1,13 @@
+ @import '../../css/variables.css';
+ .playlistItem {
+     max-width: 400px;
+     cursor: pointer;
+     margin: calc(var(--gutter) * 2) 0;
+ }
+
+ .playlistItem--title {
+     color: #cacaca;
+     font-weight: 400;
+     font-size: .85rem;
+     text-align: left;
+ }

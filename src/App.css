@@ -1,0 +1,45 @@
+.App {
+    text-align: center;
+}
+
+.App-intro {
+    font-size: large;
+}
+
+.bioBox {
+    width: 100vh;
+    height: 50vw;
+    margin-top: 30px;
+}
+
+.bioInfo {
+    max-width: 20%;
+    max-height: 70%;
+    position: absolute;
+    top: 25%;
+    right: 8%;
+    background-color: #666;
+    padding: 25px;
+    overflow-y: auto;
+    box-shadow: 1px 1px 5px #999;
+}
+
+.videoPlayer{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: -10;
+
+}
+
+@media (min-width: 1200px) {
+    #App {
+        padding-left: var(--gutter);
+        padding-right: var(--gutter);
+    }
+}
+::-webkit-scrollbar { 
+    display: none; 
+}

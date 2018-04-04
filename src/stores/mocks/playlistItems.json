@@ -1,0 +1,365 @@
+{
+ "kind": "youtube#playlistItemListResponse",
+ "etag": "\"_gJQceDMxJ8gP-8T2HLXUoURK8c/qCj4Yhm8zv-2cjZbpatKMNOEtxE\"",
+ "pageInfo": {
+  "totalResults": 8,
+  "resultsPerPage": 10
+ },
+ "items": [
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"_gJQceDMxJ8gP-8T2HLXUoURK8c/vZIHuDPZAdhHK6xnW4SJI7R_86k\"",
+   "id": "UExoM0VmbFZFVmpMXzJuRjJ6RU0xX3E5eFk4ZEZLT25Fci41NkI0NEY2RDEwNTU3Q0M2",
+   "snippet": {
+    "publishedAt": "2017-10-16T11:45:38.000Z",
+    "channelId": "UCYyapFMzeu5_pGeQv1hk2Og",
+    "title": "Time Lapse African Sunrise with Acacia Tree - Royalty Free HD Stock Footage",
+    "description": "Free African Sunrise with Acacia Tree Royalty Free Stock Time Lapse HD Video footage for your videos.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/sDs6tLCkAwk/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/sDs6tLCkAwk/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/sDs6tLCkAwk/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/sDs6tLCkAwk/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/sDs6tLCkAwk/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Ieva Makselyte",
+    "playlistId": "PLh3EflVEVjL_2nF2zEM1_q9xY8dFKOnEr",
+    "position": 0,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "sDs6tLCkAwk"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"_gJQceDMxJ8gP-8T2HLXUoURK8c/ZJTV7XmHAC8YMYCBOpZmokLKpFA\"",
+   "id": "UExoM0VmbFZFVmpMXzJuRjJ6RU0xX3E5eFk4ZEZLT25Fci4yODlGNEE0NkRGMEEzMEQy",
+   "snippet": {
+    "publishedAt": "2017-10-16T11:47:36.000Z",
+    "channelId": "UCYyapFMzeu5_pGeQv1hk2Og",
+    "title": "Slow Motion Drone Over African Landscape - Royalty Free HD Drone Stock Footage.",
+    "description": "Royalty Free HD Stock Footage - Drone Slow Motion Over African Savanna\nLicense free HD stock footage for you video production. If you would like to use this Free HD Footage please subscribe to our channel and it is yours. No licensing involved!",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/Nf24FwcCsbU/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/Nf24FwcCsbU/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/Nf24FwcCsbU/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/Nf24FwcCsbU/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/Nf24FwcCsbU/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Ieva Makselyte",
+    "playlistId": "PLh3EflVEVjL_2nF2zEM1_q9xY8dFKOnEr",
+    "position": 1,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "Nf24FwcCsbU"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"_gJQceDMxJ8gP-8T2HLXUoURK8c/u3SSJgXuAn2cOl5OYKPj7TG4u4Q\"",
+   "id": "UExoM0VmbFZFVmpMXzJuRjJ6RU0xX3E5eFk4ZEZLT25Fci4wMTcyMDhGQUE4NTIzM0Y5",
+   "snippet": {
+    "publishedAt": "2017-10-16T11:49:12.000Z",
+    "channelId": "UCYyapFMzeu5_pGeQv1hk2Og",
+    "title": "Free Stock Footage Wildlife Young Male Lion Head Shot - Africa Travel Channel in HD",
+    "description": "Royalty free stock footage of a young Male Kalahari Lion. Shot close Up.\n\nFree to use Professional Animal and Wildlife Footage in HD.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/0PMX5tg7rpo/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/0PMX5tg7rpo/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/0PMX5tg7rpo/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/0PMX5tg7rpo/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/0PMX5tg7rpo/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Ieva Makselyte",
+    "playlistId": "PLh3EflVEVjL_2nF2zEM1_q9xY8dFKOnEr",
+    "position": 2,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "0PMX5tg7rpo"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"_gJQceDMxJ8gP-8T2HLXUoURK8c/inmsctm2U6jWE1zbh_GuPNTt2wk\"",
+   "id": "UExoM0VmbFZFVmpMXzJuRjJ6RU0xX3E5eFk4ZEZLT25Fci41MjE1MkI0OTQ2QzJGNzNG",
+   "snippet": {
+    "publishedAt": "2017-10-16T11:56:25.000Z",
+    "channelId": "UCYyapFMzeu5_pGeQv1hk2Og",
+    "title": "Free Stock Footage - Cheetah Kill Series HDV1 - Africa Travel Channel in HD",
+    "description": "Royalty free stock footage of Cheetah at a kill. HDV1\nFree to use Professional Animal and Wildlife Video in HD.",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/QSfjHCO5VKQ/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/QSfjHCO5VKQ/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/QSfjHCO5VKQ/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/QSfjHCO5VKQ/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/QSfjHCO5VKQ/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Ieva Makselyte",
+    "playlistId": "PLh3EflVEVjL_2nF2zEM1_q9xY8dFKOnEr",
+    "position": 3,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "QSfjHCO5VKQ"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"_gJQceDMxJ8gP-8T2HLXUoURK8c/Qs_U6LsVpmAAsOUfC4f89MW9nBs\"",
+   "id": "UExoM0VmbFZFVmpMXzJuRjJ6RU0xX3E5eFk4ZEZLT25Fci4wOTA3OTZBNzVEMTUzOTMy",
+   "snippet": {
+    "publishedAt": "2017-10-16T11:56:49.000Z",
+    "channelId": "UCYyapFMzeu5_pGeQv1hk2Og",
+    "title": "HD African Wildlife Stock footage - Photos of Africa",
+    "description": "Royalty free HD stock footage, Nature Footage comprehensive stock video footage of wildlife and scenic destinations.\n\nAll Video content copyright by Photos of Africa",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/EObm3cZa36Q/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/EObm3cZa36Q/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/EObm3cZa36Q/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/EObm3cZa36Q/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     }
+    },
+    "channelTitle": "Ieva Makselyte",
+    "playlistId": "PLh3EflVEVjL_2nF2zEM1_q9xY8dFKOnEr",
+    "position": 4,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "EObm3cZa36Q"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"_gJQceDMxJ8gP-8T2HLXUoURK8c/kWiaQwEb__Za1kaJ30kEkWFpmtg\"",
+   "id": "UExoM0VmbFZFVmpMXzJuRjJ6RU0xX3E5eFk4ZEZLT25Fci4xMkVGQjNCMUM1N0RFNEUx",
+   "snippet": {
+    "publishedAt": "2017-10-16T12:03:50.000Z",
+    "channelId": "UCYyapFMzeu5_pGeQv1hk2Og",
+    "title": "Sea Waves  | Cape Town | Inspire 1 | Aerial Stock Footage",
+    "description": "Sea Waves  | Cape Town  | Inspire 1 | Aerial Stock Footage\nHD 60 fps by Russell Tranter\n\nweb : www.russelltranter.co.za\ninstagram : www.instagram.com/russelltranter\nfacebook : www.facebook.com/russelltranter2",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/IMfE3rePN_g/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/IMfE3rePN_g/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/IMfE3rePN_g/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/IMfE3rePN_g/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/IMfE3rePN_g/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Ieva Makselyte",
+    "playlistId": "PLh3EflVEVjL_2nF2zEM1_q9xY8dFKOnEr",
+    "position": 5,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "IMfE3rePN_g"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"_gJQceDMxJ8gP-8T2HLXUoURK8c/XGCZ7kgdK-YITZ5MRrf37AkCO7M\"",
+   "id": "UExoM0VmbFZFVmpMXzJuRjJ6RU0xX3E5eFk4ZEZLT25Fci41MzJCQjBCNDIyRkJDN0VD",
+   "snippet": {
+    "publishedAt": "2017-10-16T12:04:03.000Z",
+    "channelId": "UCYyapFMzeu5_pGeQv1hk2Og",
+    "title": "Waves | Cape Town | Inspire 1 | Aerial Stock Footage",
+    "description": "Waves  | Cape Town  | Inspire 1 | Aerial Stock Footage\nHD 60 fps by Russell Tranter\n\nweb : www.russelltranter.co.za\ninstagram : www.instagram.com/russelltranter\nfacebook : www.facebook.com/russelltranter2",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/mmt6Ve8mVW8/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/mmt6Ve8mVW8/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/mmt6Ve8mVW8/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/mmt6Ve8mVW8/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/mmt6Ve8mVW8/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Ieva Makselyte",
+    "playlistId": "PLh3EflVEVjL_2nF2zEM1_q9xY8dFKOnEr",
+    "position": 6,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "mmt6Ve8mVW8"
+    }
+   }
+  },
+  {
+   "kind": "youtube#playlistItem",
+   "etag": "\"_gJQceDMxJ8gP-8T2HLXUoURK8c/rnl-OjxbVS6CGIzuVaAlT538wd0\"",
+   "id": "UExoM0VmbFZFVmpMXzJuRjJ6RU0xX3E5eFk4ZEZLT25Fci5DQUNERDQ2NkIzRUQxNTY1",
+   "snippet": {
+    "publishedAt": "2017-10-16T16:07:36.000Z",
+    "channelId": "UCYyapFMzeu5_pGeQv1hk2Og",
+    "title": "An Aerial Birds Eye Shot Of The Ocean and Waves // Free Stock Footage",
+    "description": "A smooth aerial drone shot over the ocean shoreline. \nThis video was  taken with a DJI Phantom 3 Advanced\n\nTo download this or any of our videos, we recommend using clipconverter.cc",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/g0M4vkfCoWM/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/g0M4vkfCoWM/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/g0M4vkfCoWM/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/g0M4vkfCoWM/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/g0M4vkfCoWM/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Ieva Makselyte",
+    "playlistId": "PLh3EflVEVjL_2nF2zEM1_q9xY8dFKOnEr",
+    "position": 7,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "g0M4vkfCoWM"
+    }
+   }
+  }
+ ]
+}

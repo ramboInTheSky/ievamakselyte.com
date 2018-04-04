@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+html {
+    /* this will be used for calculation of all sizes in 'rem' */
+    font-size: var(--root-size);
+}
+
+body {
+    font-size: var(--font-size-sm);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+*:focus {
+    outline: none;
+}
+
+ul {
+    margin-bottom: 8px;
+}
+
+a {
+    color: #77B94D;
+}
+
+.pull-right{
+    float: right;
+}
+.pull-left{
+    float: left;
+}

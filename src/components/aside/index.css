@@ -1,0 +1,19 @@
+ @import '../../css/variables.css';
+ @import '../../css/animations.css';
+
+ .leftSide {
+    opacity: 1;
+    background-color: var(--header-background);
+    position: absolute;
+    left: 0;
+    top: 52px;
+    bottom: 0;
+    z-index: 11;
+    /*box-shadow:  0px 0px 23px 1px rgba(0,0,0,0.13);*/
+    /*transition: width 100ms 100ms, opacity 100ms 100ms;*/
+    overflow-y: auto;
+    overflow-x: hide;
+    padding: var(--gutter);
+    /*border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;*/
+}

@@ -1,0 +1,97 @@
+ @import url('https://fonts.googleapis.com/css?family=Codystar:300,400|Libre+Barcode+39+Extended+Text');
+ @import url('https://use.fontawesome.com/releases/v5.0.8/css/all.css');
+ /*
+font-family: 'Libre Barcode 39 Extended Text', cursive;
+font-family: 'Codystar', cursive;
+*/
+
+ @import '../../css/variables.css';
+ .header {
+     background-color: var(--header-background);
+     height: 0;
+     padding: var(--small-gutter) var(--gutter);
+     color: white;
+     box-shadow: 0px 2px 50px 0px rgba(0,0,0,.5);
+     opacity: 0;
+     transition: height 500ms 100ms, opacity 900ms 100ms;
+ }
+
+ .show_inner {
+     opacity: 1;
+     height: 52px;
+     padding-top: 1rem;
+ }
+
+ .nav_container {
+     display: inline-block;
+     list-style: none;
+     float: left;
+     width: 50%;
+     /* align-items: left; */
+     margin: 0;
+     padding: 0;
+ }
+
+ .nav_container li {
+     float: left;
+     font-size: 1.75rem;
+     padding-right: 1rem;
+ }
+
+ .nav_container li a {
+     cursor: pointer;
+     font-family: 'Codystar', cursive;
+     user-select: none;
+     color: #ff5c5c;
+ }
+
+ .nav_container li a:hover {
+     font-weight: 700;
+ }
+
+ .nav_container li a .fa {
+     /*font-size: 0.850rem;*/
+     padding-left: 1rem;
+     opacity: 0.4;
+ }
+
+ .nav_container li a .fa:hover {
+     opacity: 0.8;
+ }
+
+ .logo_title_container {
+     display: inline-block;
+     float: left;
+     width: 50%;
+     text-align: right;
+ }
+
+ .logo {
+     animation: logo-spin infinite 20s linear;
+     height: 30px;
+     vertical-align: -webkit-baseline-middle;
+ }
+
+ .title {
+     font-family: 'Libre Barcode 39 Extended Text', cursive;
+     font-size: 3.5rem;
+     color: #ff5c5c;
+     vertical-align: -webkit-baseline-middle;
+     padding-left: var(--small-gutter);
+     user-select: none;
+     opacity: 0.6;
+ }
+
+ .title:hover{
+    opacity: 1;
+    cursor: pointer;
+ }
+
+ @keyframes logo-spin {
+     from {
+         transform: rotate(0deg);
+     }
+     to {
+         transform: rotate(360deg);
+     }
+ }
