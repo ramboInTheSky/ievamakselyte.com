@@ -6,7 +6,9 @@ import './index.css';
 
 interface SidebarProps {
     playlists?: any[]
-    selectVideoHandler: (videoId: string)=>void
+    show: boolean
+    onBlur: () => {}
+    selectVideoHandler: (videoId: string) => void
 }
 
 interface SidebarState {
@@ -17,18 +19,13 @@ export class Sidebar extends React.Component<SidebarProps, SidebarState> {
     constructor(props: SidebarProps) {
         super(props)
         this.state = {
-            show: false
+            show: props.show
         }
-    }
-
-    onBlurHandler(e: any) {
-        e.preventDefault()
-        this.setState({ show: false })
     }
 
     componentWillReceiveProps(nextProps: SidebarProps) {
         if (nextProps.playlists) {
-           this.setState({ show: true })
+            this.setState({ show: nextProps.show })
         }
 
     }
@@ -36,8 +33,7 @@ export class Sidebar extends React.Component<SidebarProps, SidebarState> {
     render() {
         // const { playlists } = this.props
         const { show } = this.state
-        const { playlists } = this.props
-        const onBlurHandler = this.onBlurHandler.bind(this)
+        const { playlists, onBlur } = this.props
         return (
             <CSSTransitionGroup
                 className="transitionElement"
@@ -45,9 +41,9 @@ export class Sidebar extends React.Component<SidebarProps, SidebarState> {
                 transitionEnterTimeout={400}
                 transitionLeaveTimeout={400}>
                 {show ?
-                    <div className="leftSide" onMouseLeave={(e) => onBlurHandler(e)}>
+                    <div className="leftSide" onMouseLeave={(e) => onBlur()}>
                         {playlists && playlists.length ?
-                            playlists.map((playlistItem: any, index: number) => <PlaylistItem key={`playlistItem_${index}`} playlistItem={playlistItem} selectVideoHandler={this.props.selectVideoHandler}/>)
+                            playlists.map((playlistItem: any, index: number) => <PlaylistItem key={`playlistItem_${index}`} playlistItem={playlistItem} selectVideoHandler={this.props.selectVideoHandler} />)
                             :
                             null
                         }

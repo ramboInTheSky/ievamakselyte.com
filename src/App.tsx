@@ -13,6 +13,7 @@ interface AppState {
   playlistsItems?: any[]
   playing: string
   showBio: boolean
+  showSidebar: boolean
 }
 
 const initialVideo = 'fDNChTazvaM'
@@ -30,7 +31,8 @@ class App extends React.Component<AppProps, AppState> {
     this.state = {
       playlistsItems: [],
       playing: initialVideo,
-      showBio: false
+      showBio: false,
+      showSidebar: false
     }
   }
 
@@ -41,9 +43,14 @@ class App extends React.Component<AppProps, AppState> {
   }
 
   selectPlaylist(category: string) {
+    this.closeSidebar()
     const playlistId = availablePlaylists[category]
     Fetch.playlistItems(playlistId).then( // TODO this should be coming from a list of items
-      (data: any) => this.setState({ playlistsItems: data.items })
+      (data: any) => 
+      {
+        this.setState({ playlistsItems: data.items }, this.openSidebar)
+      }
+      
     )
   }
 
@@ -60,6 +67,7 @@ class App extends React.Component<AppProps, AppState> {
   }
 
   selectVideoHandler(videoId: string) {
+    this.closeSidebar()
     this.setState({ playing: videoId })
   }
 
@@ -88,10 +96,27 @@ class App extends React.Component<AppProps, AppState> {
   }
 
   toggleBio(){
+    this.closeSidebar()
     this.setState({
       showBio: !this.state.showBio
     })
   }
+
+  closeSidebar(){
+    this.setState({
+      showSidebar: false
+    })
+  }
+
+    openSidebar(){
+    this.setState({
+      showSidebar: true
+    })
+  }
+
+   onBlurHandler() {
+        this.closeSidebar()
+    }
 
   render() {
 
@@ -108,7 +133,7 @@ class App extends React.Component<AppProps, AppState> {
       }
     };
     
-    const { playlistsItems, playing, showBio } = this.state
+    const { playlistsItems, playing, showBio, showSidebar } = this.state
 
     const selectVideoHandler = this.selectVideoHandler.bind(this)
     const selectPlaylist = this.selectPlaylist.bind(this)
@@ -116,6 +141,7 @@ class App extends React.Component<AppProps, AppState> {
     const onVideoPaused = this.onVideoPaused.bind(this)
     const onVideoPlayed = this.onVideoPlayed.bind(this)
     const toggleBio = this.toggleBio.bind(this)
+    const onBlurHandler = this.onBlurHandler.bind(this)
 
     const controls = {
       pause: this.pauseVideo.bind(this),
@@ -127,7 +153,7 @@ class App extends React.Component<AppProps, AppState> {
     return (
       <div className="App">
         <Header show={false} selectPlaylistHandler={selectPlaylist} videoApiControls={controls} onTitleClick={toggleBio}/>
-        <Sidebar playlists={playlistsItems} selectVideoHandler={selectVideoHandler} />
+        <Sidebar show={showSidebar} playlists={playlistsItems} selectVideoHandler={selectVideoHandler} onBlur={onBlurHandler}/>
         <Lightbox text={bio} className="bioBox" show={showBio} onClick={toggleBio}/>
         <YouTube
           videoId={playing}
