@@ -3,7 +3,7 @@ import { Header, Sidebar, Lightbox } from './components';
 import { Fetch } from './stores/fetch'
 import YouTube from 'react-youtube';
 import './App.css';
-import {bio} from './resources/bio'
+import { bio } from './resources/bio'
 
 interface AppProps {
 
@@ -25,7 +25,7 @@ const availablePlaylists: any = {
 }
 
 class App extends React.Component<AppProps, AppState> {
-  private videoApiControls: any 
+  private videoApiControls: any
   constructor(props: AppProps) {
     super(props)
     this.state = {
@@ -42,16 +42,11 @@ class App extends React.Component<AppProps, AppState> {
     // )
   }
 
-  selectPlaylist(category: string) {
-    this.closeSidebar()
+  async selectPlaylist(category: string) {
+    // this.closeSidebar()
     const playlistId = availablePlaylists[category]
-    Fetch.playlistItems(playlistId).then( // TODO this should be coming from a list of items
-      (data: any) => 
-      {
-        this.setState({ playlistsItems: data.items }, this.openSidebar)
-      }
-      
-    )
+    const data = await Fetch.playlistItems(playlistId)
+    this.setState({ playlistsItems: data.items }, this.openSidebar)
   }
 
   onVideoReady(event: any) {
@@ -59,11 +54,11 @@ class App extends React.Component<AppProps, AppState> {
     this.videoApiControls = event.target
     // event.target.pauseVideo();
   }
-  onVideoPaused(event: any){
-  
+  onVideoPaused(event: any) {
+
   }
-  onVideoPlayed(event: any){
-  
+  onVideoPlayed(event: any) {
+
   }
 
   selectVideoHandler(videoId: string) {
@@ -71,52 +66,52 @@ class App extends React.Component<AppProps, AppState> {
     this.setState({ playing: videoId })
   }
 
-  pauseVideo(){
+  pauseVideo() {
     this.videoApiControls.pauseVideo()
   }
-  playVideo(){
+  playVideo() {
     this.videoApiControls.playVideo()
   }
-  backVideo(){
+  backVideo() {
     const current = this.videoApiControls.getCurrentTime()
-    this.videoApiControls.seekTo(current-15)
+    this.videoApiControls.seekTo(current - 15)
   }
-  fwdVideo(){
+  fwdVideo() {
     const current = this.videoApiControls.getCurrentTime()
     this.videoApiControls.seekTo(current + 15)
   }
-  toggleMute(){
+  toggleMute() {
     const isMuted = this.videoApiControls.isMuted()
-    if(isMuted){
+    if (isMuted) {
       this.videoApiControls.unMute()
     }
-    else{
+    else {
       this.videoApiControls.unMute()
     }
   }
 
-  toggleBio(){
+  toggleBio() {
     this.closeSidebar()
     this.setState({
       showBio: !this.state.showBio
     })
   }
 
-  closeSidebar(){
+  closeSidebar() {
     this.setState({
       showSidebar: false
     })
   }
 
-    openSidebar(){
+  openSidebar() {
     this.setState({
       showSidebar: true
     })
   }
 
-   onBlurHandler() {
-        this.closeSidebar()
-    }
+  onBlurHandler() {
+    this.closeSidebar()
+  }
 
   render() {
 
@@ -132,7 +127,7 @@ class App extends React.Component<AppProps, AppState> {
         modestbranding: 1
       }
     };
-    
+
     const { playlistsItems, playing, showBio, showSidebar } = this.state
 
     const selectVideoHandler = this.selectVideoHandler.bind(this)
@@ -152,9 +147,9 @@ class App extends React.Component<AppProps, AppState> {
     }
     return (
       <div className="App">
-        <Header show={false} selectPlaylistHandler={selectPlaylist} videoApiControls={controls} onTitleClick={toggleBio}/>
-        <Sidebar show={showSidebar} playlists={playlistsItems} selectVideoHandler={selectVideoHandler} onBlur={onBlurHandler}/>
-        <Lightbox text={bio} className="bioBox" show={showBio} onClick={toggleBio}/>
+        <Header show={false} selectPlaylistHandler={selectPlaylist} videoApiControls={controls} onTitleClick={toggleBio} />
+        <Sidebar show={showSidebar} playlists={playlistsItems} selectVideoHandler={selectVideoHandler} onBlur={onBlurHandler} />
+        <Lightbox text={bio} className="bioBox" show={showBio} onClick={toggleBio} />
         <YouTube
           videoId={playing}
           opts={opts}

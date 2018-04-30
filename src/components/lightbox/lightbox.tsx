@@ -21,8 +21,8 @@ export class Lightbox extends React.PureComponent<LightboxProps> {
             <CSSTransitionGroup
                 className="transitionElement"
                 transitionName={`animations-${'default'}`}
-                transitionEnterTimeout={400}
-                transitionLeaveTimeout={400}>
+                transitionEnterTimeout={150}
+                transitionLeaveTimeout={100}>
                 {show ?
                     <div className={`lightbox ${className || ''}`} onClick={onClick}>
                         <div className="lightbox-header">

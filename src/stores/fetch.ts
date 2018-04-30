@@ -11,8 +11,10 @@ export class Fetch {
         return fetch(`${url}playlists?${apiKeyP}&${channelIdP}&part=snippet&maxResults=${limit || 10}`).then((data) => data.json())
     }
 
-    static playlistItems(playlistId: string, limit?: number) {
-        return fetch(`${url}playlistItems?${apiKeyP}&playlistId=${playlistId}&part=snippet,contentDetails&maxResults=${limit || 10}`).then((data) => data.json())
+    static async playlistItems(playlistId: string, limit?: number): Promise<any> {
+        const playlistUrl = `${url}playlistItems?${apiKeyP}&playlistId=${playlistId}&part=snippet,contentDetails&maxResults=${limit || 10}`
+        const data = await fetch(playlistUrl) 
+        return data.json()
     }
 
 }

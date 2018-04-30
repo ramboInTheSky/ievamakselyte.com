@@ -6,12 +6,13 @@ interface HeaderProps {
     show: boolean
     selectPlaylistHandler: (category: string) => void
     videoApiControls: any
-    onTitleClick: ()=>{}
+    onTitleClick: () => {}
 }
 
 interface HeaderState {
     show: boolean
     isMute: boolean
+    currentLink: string
 }
 
 export class Header extends React.Component<HeaderProps, HeaderState> {
@@ -21,7 +22,8 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
         const { show } = props
         this.state = {
             show,
-            isMute: false
+            isMute: false,
+            currentLink: ''
         }
     }
 
@@ -34,18 +36,30 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
         this.setState({ isMute: !this.state.isMute })
     }
 
+    selectLink(link: string) {
+        const { selectPlaylistHandler } = this.props
+        const { currentLink } = this.state
+        if (link != currentLink) {
+            if (selectPlaylistHandler || link) {
+                selectPlaylistHandler(link)
+            }
+            this.setState({currentLink: link})
+        }
+    }
+
     render() {
-        const { selectPlaylistHandler, onTitleClick } = this.props
+        const { onTitleClick } = this.props
         const { show, isMute } = this.state
         const controls = this.props.videoApiControls
         const toggleMute = this.toggleMute.bind(this)
+        const selectLink = this.selectLink.bind(this)
 
         return (
             <header className={`header ${show ? 'show_inner' : ''} `}>
                 <ul className="nav_container">
-                    <li><a onClick={() => selectPlaylistHandler('film')} >Film</a></li>
-                    <li><a onClick={() => selectPlaylistHandler('digital')} >Digital</a></li>
-                    <li><a onClick={() => selectPlaylistHandler('music')} >Music</a></li>
+                    <li><a onClick={() => selectLink('film')} >Film</a></li>
+                    <li><a onClick={() => selectLink('digital')} >Digital</a></li>
+                    <li><a onClick={() => selectLink('music')} >Music</a></li>
                     <li>
                         <a><i onClick={() => controls.back()} className="fa fa-backward" title="Back 15 seconds" /></a>
                         <a><i onClick={() => controls.play()} className="fa fa-play" title="Play" /></a>
