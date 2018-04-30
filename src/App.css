@@ -8,8 +8,8 @@
 
 .bioBox {
     width: 100vh;
-    height: 50vw;
-    margin-top: 30px;
+    min-height: 150px;
+    margin-top: 100px;
 }
 
 .bioInfo {
@@ -42,4 +42,16 @@
 }
 ::-webkit-scrollbar { 
     display: none; 
+}
+
+.availability_banner {
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    transform: rotate(315deg) translate(30%, 1200%);
+    color: white;
+    background-color: #ce41b6;
+    box-shadow:0px 0px 2px 2px #ce41b6;
+    opacity: 0.7;
+    cursor: pointer;
 }

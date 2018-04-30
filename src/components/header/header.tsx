@@ -37,9 +37,9 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
     }
 
     selectLink(link: string) {
-        const { selectPlaylistHandler } = this.props
+        const { selectPlaylistHandler, show } = this.props
         const { currentLink } = this.state
-        if (link != currentLink) {
+        if (link != currentLink || !show) {
             if (selectPlaylistHandler || link) {
                 selectPlaylistHandler(link)
             }

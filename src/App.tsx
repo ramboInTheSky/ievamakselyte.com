@@ -3,7 +3,7 @@ import { Header, Sidebar, Lightbox } from './components';
 import { Fetch } from './stores/fetch'
 import YouTube from 'react-youtube';
 import './App.css';
-import { bio } from './resources/bio'
+import { bio, contacts } from './resources'
 
 interface AppProps {
 
@@ -13,6 +13,7 @@ interface AppState {
   playlistsItems?: any[]
   playing: string
   showBio: boolean
+  showContacts: boolean
   showSidebar: boolean
 }
 
@@ -32,7 +33,8 @@ class App extends React.Component<AppProps, AppState> {
       playlistsItems: [],
       playing: initialVideo,
       showBio: false,
-      showSidebar: false
+      showSidebar: false,
+      showContacts: false
     }
   }
 
@@ -86,7 +88,7 @@ class App extends React.Component<AppProps, AppState> {
       this.videoApiControls.unMute()
     }
     else {
-      this.videoApiControls.unMute()
+      this.videoApiControls.mute()
     }
   }
 
@@ -94,6 +96,12 @@ class App extends React.Component<AppProps, AppState> {
     this.closeSidebar()
     this.setState({
       showBio: !this.state.showBio
+    })
+  }
+  toggleContacts() {
+    this.closeSidebar()
+    this.setState({
+      showContacts: !this.state.showContacts
     })
   }
 
@@ -128,7 +136,7 @@ class App extends React.Component<AppProps, AppState> {
       }
     };
 
-    const { playlistsItems, playing, showBio, showSidebar } = this.state
+    const { playlistsItems, playing, showBio, showSidebar, showContacts } = this.state
 
     const selectVideoHandler = this.selectVideoHandler.bind(this)
     const selectPlaylist = this.selectPlaylist.bind(this)
@@ -136,7 +144,13 @@ class App extends React.Component<AppProps, AppState> {
     const onVideoPaused = this.onVideoPaused.bind(this)
     const onVideoPlayed = this.onVideoPlayed.bind(this)
     const toggleBio = this.toggleBio.bind(this)
+    const toggleContacts = this.toggleContacts.bind(this)
     const onBlurHandler = this.onBlurHandler.bind(this)
+    const availabilityBanner = (
+      <div className="availability_banner" onClick={toggleContacts}>
+        <p>2018 - Available for Projects and Commissions</p>
+      </div>
+    )
 
     const controls = {
       pause: this.pauseVideo.bind(this),
@@ -150,6 +164,7 @@ class App extends React.Component<AppProps, AppState> {
         <Header show={false} selectPlaylistHandler={selectPlaylist} videoApiControls={controls} onTitleClick={toggleBio} />
         <Sidebar show={showSidebar} playlists={playlistsItems} selectVideoHandler={selectVideoHandler} onBlur={onBlurHandler} />
         <Lightbox text={bio} className="bioBox" show={showBio} onClick={toggleBio} />
+        <Lightbox text={contacts} className="bioBox" show={showContacts} onClick={toggleContacts} />
         <YouTube
           videoId={playing}
           opts={opts}
@@ -158,9 +173,12 @@ class App extends React.Component<AppProps, AppState> {
           onPlay={onVideoPlayed}
           onPause={onVideoPaused}
         />
+        {availabilityBanner}
       </div>
     );
   }
 }
 
 export default App;
+
+
