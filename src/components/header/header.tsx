@@ -5,8 +5,8 @@ import './index.css';
 interface HeaderProps {
     show: boolean
     selectPlaylistHandler: (category: string) => void
-    videoApiControls: any
-    onTitleClick: () => {}
+    videoApiControls: {[key:string]:Function}
+    onTitleClick: (f:any)=>void
 }
 
 interface HeaderState {

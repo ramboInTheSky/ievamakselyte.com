@@ -22,6 +22,7 @@
     "react": "^16.2.0",
     "react-dev-utils": "4.2.1",
     "react-dom": "^16.2.0",
+    "react-loader": "^2.4.5",
     "react-mdl": "1.11.0",
     "react-mdl-extra": "1.5.0",
     "react-transition-group": "1.2.1",
@@ -44,14 +45,16 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "tsc": "tsc"
   },
   "devDependencies": {
     "@types/jest": "22.1.4",
     "@types/lodash": "^4.14.108",
     "@types/node": "9.4.6",
-    "@types/react": "16.0.40",
+    "@types/react": "^16.0.40",
     "@types/react-dom": "16.0.4",
+    "@types/react-loader": "^2.4.2",
     "@types/react-transition-group": "1.1.2",
     "@types/react-youtube": "^7.4.1",
     "lodash": "^4.17.10",

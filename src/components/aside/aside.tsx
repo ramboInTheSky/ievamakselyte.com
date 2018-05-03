@@ -7,7 +7,7 @@ import './index.css';
 interface SidebarProps {
     playlists?: any[]
     show: boolean
-    onBlur: () => {}
+    onBlur: Function
     selectVideoHandler: (videoId: string) => void
 }
 

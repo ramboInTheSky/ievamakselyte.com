@@ -7,7 +7,7 @@ export interface LightboxProps {
     text: string[][]
     className: string
     show: boolean
-    onClick?: () => {}
+    onClick?: (f:any)=>void
 }
 
 export class Lightbox extends React.PureComponent<LightboxProps> {
