@@ -6,4 +6,9 @@
     --gutter: 1rem;
     --small-gutter: 0.28rem;
     --font-size-sm: 0.85rem;
+    --main-color: #ff5c5c;
+    --main-color-shaded: #ff5c5c;
+    --standard-opacity: 0.7;
+    --text-color-on-clear: #333;
+    --text-color-on-dark: #fff;
 }

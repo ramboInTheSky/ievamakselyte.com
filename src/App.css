@@ -1,4 +1,6 @@
-.App {
+ @import './css/variables.css';
+ 
+ .App {
     text-align: center;
 }
 
@@ -48,10 +50,15 @@
     position: absolute;
     bottom: 100px;
     width: 100%;
+    -webkit-transform: rotate(315deg) translate(30%, 1200%);
+    -ms-transform: rotate(315deg) translate(30%, 1200%);
     transform: rotate(315deg) translate(30%, 1200%);
-    color: white;
-    background-color: #ce41b6;
-    box-shadow:0px 0px 2px 2px #ce41b6;
-    opacity: 0.7;
+    color: #666;
+    background-color: white;
+    /* -webkit-box-shadow: 0px 0px 2px 2px var(--main-color); */
+    /* box-shadow: 0px 0px 2px 2px var(--main-color); */
+    opacity: var(--standard-opacity);
     cursor: pointer;
+    font-weight: 700;
+    font-size: 13px;
 }

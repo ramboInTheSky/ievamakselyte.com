@@ -42,7 +42,7 @@ font-family: 'Codystar', cursive;
      cursor: pointer;
      font-family: 'Codystar', cursive;
      user-select: none;
-     color: #ff5c5c;
+     color: var(--main-color);
  }
 
  .nav_container li a:hover {
@@ -75,7 +75,7 @@ font-family: 'Codystar', cursive;
  .title {
      font-family: 'Libre Barcode 39 Extended Text', cursive;
      font-size: 3.5rem;
-     color: #ff5c5c;
+     color: var(--main-color);
      vertical-align: -webkit-baseline-middle;
      padding-left: var(--small-gutter);
      user-select: none;

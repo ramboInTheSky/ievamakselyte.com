@@ -5,8 +5,8 @@ import './index.css';
 interface HeaderProps {
     show: boolean
     selectPlaylistHandler: (category: string) => void
-    videoApiControls: {[key:string]:Function}
-    onTitleClick: (f:any)=>void
+    videoApiControls: { [key: string]: Function }
+    onTitleClick: (f: any) => void
 }
 
 interface HeaderState {
@@ -43,7 +43,7 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
             if (selectPlaylistHandler || link) {
                 selectPlaylistHandler(link)
             }
-            this.setState({currentLink: link})
+            this.setState({ currentLink: link })
         }
     }
 

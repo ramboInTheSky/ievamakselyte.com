@@ -50,7 +50,7 @@ class App extends React.Component<AppProps, AppState> {
   }
 
   selectPlaylist = async (category: string) => {
-      const playlistId = availablePlaylists[category]
+    const playlistId = availablePlaylists[category]
     try {
       const data = await Fetch.playlistItems(playlistId)
       this.setState({ playlistsItems: data.items }, this.openSidebar)
@@ -74,7 +74,7 @@ class App extends React.Component<AppProps, AppState> {
 
   }
 
-  selectVideoHandler(videoId: string) {
+  selectVideoHandler = (videoId: string) => {
     this.closeSidebar()
     this.setState({ playing: videoId })
   }
@@ -134,8 +134,34 @@ class App extends React.Component<AppProps, AppState> {
 
 
   render() {
+   
 
     //TESTAREA
+
+    // get a string, make it uppercase, select the third letter, make it a number and return it
+    // const transform = (str: string) => {
+    //   const upperString = str.toUpperCase()
+    //   const thirdLetter = upperString.charAt(2)
+    //   const number = thirdLetter.charCodeAt(0)
+    //   return number
+    // }
+
+    const Box = (str: any) => ({
+      map: (f: Function) => Box(f(str)),
+      // toString: () => `Box(${str})`,
+      fold: (f: Function) => f(str)
+    })
+
+    const transform2 = (str: string) =>
+      Box(str)
+        .map((str: string) => str.toUpperCase())
+        .map((uStr: string) => uStr.charAt(2))
+        .fold((c: string) => c.charCodeAt(0))
+
+    const result = transform2('sticazzi')
+    console.log(result)
+
+
     //END TESTAREA
     const opts: any = {
       // height: '100%',
@@ -174,16 +200,19 @@ class App extends React.Component<AppProps, AppState> {
           <Sidebar show={showSidebar} playlists={playlistsItems} selectVideoHandler={selectVideoHandler} onBlur={this.onBlurHandler} />
           <Lightbox text={bio} className="bioBox" show={showBio} onClick={this.toggleBio} />
           <Lightbox text={contacts} className="bioBox" show={showContacts} onClick={this.toggleContacts} />
-          <YouTube
-            videoId={playing}
-            opts={opts}
-            onReady={this.onVideoReady}
-            className={'videoPlayer'}
-            onPlay={this.onVideoPlayed}
-            onPause={this.onVideoPaused}
-          />
-          {availabilityBanner}
+          <div style={{ display: 'flex' }}>
+            <YouTube
+              videoId={playing}
+              opts={opts}
+              onReady={this.onVideoReady}
+              className={'videoPlayer'}
+              onPlay={this.onVideoPlayed}
+              onPause={this.onVideoPaused}
+            />
+            {availabilityBanner}
+          </div>
         </ErrorBoundary>
+
       </div>
     );
   }
