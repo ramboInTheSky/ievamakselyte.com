@@ -3,7 +3,8 @@ import { Header, Sidebar, Lightbox } from './components';
 import { Fetch } from './stores/fetch'
 import YouTube from 'react-youtube';
 import './App.css';
-import { bio, contacts } from './resources'
+import { Biography } from './components/biography'
+import { Contacts } from './components/contacts'
 
 
 //todo: implement caching in the requests -WONTDO
@@ -112,6 +113,7 @@ class App extends React.Component<AppProps, AppState> {
   toggleContacts = () => {
     this.closeSidebar()
     this.setState({
+      showBio: false,
       showContacts: !this.state.showContacts
     })
   }
@@ -134,35 +136,6 @@ class App extends React.Component<AppProps, AppState> {
 
 
   render() {
-   
-
-    //TESTAREA
-
-    // get a string, make it uppercase, select the third letter, make it a number and return it
-    // const transform = (str: string) => {
-    //   const upperString = str.toUpperCase()
-    //   const thirdLetter = upperString.charAt(2)
-    //   const number = thirdLetter.charCodeAt(0)
-    //   return number
-    // }
-
-    const Box = (str: any) => ({
-      map: (f: Function) => Box(f(str)),
-      // toString: () => `Box(${str})`,
-      fold: (f: Function) => f(str)
-    })
-
-    const transform2 = (str: string) =>
-      Box(str)
-        .map((str: string) => str.toUpperCase())
-        .map((uStr: string) => uStr.charAt(2))
-        .fold((c: string) => c.charCodeAt(0))
-
-    const result = transform2('sticazzi')
-    console.log(result)
-
-
-    //END TESTAREA
     const opts: any = {
       // height: '100%',
       width: '100%',
@@ -198,8 +171,12 @@ class App extends React.Component<AppProps, AppState> {
         <ErrorBoundary>
           <Header show={false} selectPlaylistHandler={this.selectPlaylist} videoApiControls={controls} onTitleClick={this.toggleBio} />
           <Sidebar show={showSidebar} playlists={playlistsItems} selectVideoHandler={selectVideoHandler} onBlur={this.onBlurHandler} />
-          <Lightbox text={bio} className="bioBox" show={showBio} onClick={this.toggleBio} />
-          <Lightbox text={contacts} className="bioBox" show={showContacts} onClick={this.toggleContacts} />
+          <Lightbox className="bioBox" show={showBio} onClick={this.toggleBio} >
+            <Biography/>
+          </Lightbox>
+          <Lightbox className="bioBox" show={showContacts} onClick={this.toggleContacts} >
+            <Contacts/>
+            </Lightbox>
           <div style={{ display: 'flex' }}>
             <YouTube
               videoId={playing}
